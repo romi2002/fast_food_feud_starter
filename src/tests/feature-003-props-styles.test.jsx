@@ -81,6 +81,8 @@ export function testPropsAndStyles(App) {
     const classesAfter = Array.from(chip?.classList ?? [])
 
     const chipHasActiveClassWhenIsActiveProp = classesAfter.includes("active") && !classesBefore.includes("active")
+    console.log(chipHasActiveClassWhenIsActiveProp)
+    console.log(allChipsHaveIsActive)
 
     assert.ok(
       allChipsHaveIsActive || chipHasActiveClassWhenIsActiveProp,
